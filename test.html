@@ -3,16 +3,22 @@
 <head>
     <p id="demo"></p>
 <script>
-var twoSum = function(nums, target) {
-    for(var i = 0; i<nums.length; i++){
-        for(var j = i + 1; j < nums.length; j++){
-            if(nums[i]+nums[j]===target){
-                return [i, j]
-            }            
-        }      
-    }
+var isPalindrome = function(s) {
+  
+  var text = s.toLowerCase().replaceAll(/[^A-Za-z0-9]/g,"")
+  var reversed = text.split("").reverse().join("")
+
+  console.log(reversed)
+  
+  if(reversed===text){
+    return true
+  }
+  else{
+    return false
+  }
+
 };
-console.log(twoSum([2,7,11,15],9))
+isPalindrome("...,,, ::::@@@race a car")
 </script>
 
 </head>
